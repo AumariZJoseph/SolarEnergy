@@ -95,6 +95,7 @@ body {
     margin: 0 auto;
     list-style: none;
     justify-content: center;
+    align-items: stretch; /* This makes all items stretch to same height */
 }
 
 .nav-item {
@@ -112,7 +113,7 @@ body {
     border-radius: 6px !important;
     font-weight: 600;
     font-size: 0.95rem;
-    padding: 0.8rem 0.5rem;
+    padding: 1rem 0.5rem; /* Increased vertical padding */
     box-shadow: 0 2px 8px rgba(95,232,95,0.08);
     transition: background 0.18s, color 0.18s, transform 0.18s, box-shadow 0.18s;
     display: flex;
@@ -120,7 +121,8 @@ body {
     justify-content: center;
     text-align: center;
     width: 100%;
-    min-height: 50px;
+    height: 100%; /* Make buttons fill the full height */
+    min-height: 70px; /* Increased minimum height to accommodate longer text */
     letter-spacing: 0.3px;
     border: none;
     cursor: pointer;
@@ -1599,7 +1601,8 @@ html {
     
     .nav-btn, .nav-btn-green, .nav-btn-white {
         font-size: 0.85rem;
-        min-height: 40px;
+        min-height: 60px;
+        padding: 0.8rem 0.3rem;
     }
 }
 
@@ -1611,6 +1614,7 @@ html {
     
     .nav-btn, .nav-btn-green, .nav-btn-white {
         font-size: 0.8rem;
-        min-height: 35px;
+        min-height: 55px;
+        padding: 0.7rem 0.2rem;
     }
 }
