@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Solar Energy Services Company Ltd.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Simple carousel function - must be defined early
+        function changeImage(btn, direction) {
+            const carousel = btn.closest('.image-carousel');
+            if (!carousel) return;
+            
+            const images = carousel.querySelectorAll('.carousel-img');
+            if (images.length === 0) return;
+            
+            let currentIndex = 0;
+            images.forEach((img, idx) => {
+                if (img.classList.contains('active')) {
+                    currentIndex = idx;
+                }
+            });
+            
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = images.length - 1;
+            if (newIndex >= images.length) newIndex = 0;
+            
+            images[currentIndex].classList.remove('active');
+            images[newIndex].classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Branding/Header Section -->
+    <header class="branding-header">
+        <!-- Branding Header Background Slideshow -->
+        <div class="branding-slideshow-bg">
+            <div class="branding-slideshow-container">
+                <div class="branding-slide-bg active" style="background-image: url('Images/MegaSun5.jpg');"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/pvsystem.png');"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/secrets.png');"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/Slideshow/image1.jpg');"></div>
+            </div>
+            <div class="branding-overlay"></div>
+        </div>
+        <div class="branding-row">
+            <div class="branding-logo">
+                <img src="Images/Logo.jpg" alt="Business Logo" class="main-logo-img">
+            </div>
+            <div class="branding-titles">
+                <h1 class="company-name">Solar Energy Services Company Ltd.</h1>
+                <div class="tagline">A Total Service Provider</div>
+                <div class="slogan">One Stop Shop for your Solar-Systems Needs</div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-menu nav-horizontal">
+            <li class="nav-item"><a href="index.html" class="nav-link nav-btn nav-btn-white">Home</a></li>
+            <li class="nav-item"><a href="index.html#installations" class="nav-link nav-btn nav-btn-green">Installation &amp; Servicing</a></li>
+            <li class="nav-item"><a href="index.html#repairs-maintenance" class="nav-link nav-btn nav-btn-green">Repair &amp; Maintenance</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link nav-btn">Products</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link nav-btn nav-btn-white">Contact / Book Consultation</a></li>
+        </ul>
+    </nav>
+    <!-- Products Page Section -->
+    <section class="products-page" id="products">
+        <div class="container">
+            <h2 class="products-heading">Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/MegaSun2.jpg" alt="Solar Water Heater" class="carousel-img active">
+                            <img src="Images/MegaSun3.jpg" alt="Solar Water Heater" class="carousel-img">
+                            <img src="Images/MegaSun4.jpg" alt="Solar Water Heater" class="carousel-img">
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                    </div>
+                    <h3>Solar Water Heater Systems</h3>
+                    <p>High-efficiency evacuated tube systems designed for Caribbean climate.</p>
+                </div>
+                <div class="product-card">
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/pvsystem.jpg" alt="PV Systems" class="carousel-img active">
+                            <img src="Images/Products/pvsystem2.jpg" alt="PV Systems" class="carousel-img">
+                            <img src="Images/Products/pvsystem3.jpg" alt="PV Systems" class="carousel-img">
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                    </div>
+                    <h3>PV Systems</h3>
+                    <p>We design, supply and install grid tie and off grid Solar PV systems for domestic, commercial and sportive applications.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/poolheat.jpg" alt="Solar Pool Heating" class="carousel-img active">
+                            <img src="Images/Products/poolheat2.jpg" alt="Solar Pool Heating" class="carousel-img">
+                            <img src="Images/Products/poolheat3.jpg" alt="Solar Pool Heating" class="carousel-img">
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                    </div>
+                    <h3>Solar Pool Heating</h3>
+                    <p>Our Gravity-Type Solar Pool Heater provides an economical and efficient way to heat your pool comfortably, with simple installation and guaranteed performance.</p>
+                </div>
+
+
+                <div class="product-card solatube-card">
+                    <span class="new-product-badge">New Product!</span>
+                    <img src="Images/Products/Solatube.png" alt="SolaTube" class="product-card-img">
+                    <h3>SolaTube</h3>
+                    <p>Bring natural daylight to spaces up to 300 sq. ft — kitchens, living rooms, baths, and more. Enjoy bright, beautiful light without using electricity. Save big with SolaTube.</p>
+                    <button class="learn-more-btn" onclick="openVideoModal('Images/Products/Solatube-video.mp4')">Learn More</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="Images/Products/solarpanel2.jpg" alt="Solar Panels" class="product-card-img">
+                    <h3>Solar Panels</h3>
+                    <p>Premium solar panels with high efficiency ratings for maximum energy generation.</p>
+                    <a href="Images/Products/Tanfon-Half-Cell-Solar-Panel-410W-600W.pdf" target="_blank" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="Images/Products/SolarAirConditioning.jpg" alt="Solar Air Conditioning" class="product-card-img">
+                    <h3>Solar Air Conditioning</h3>
+                    <p>100% solar and hybrid systems from 9000 to 36000 BTU.</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="Images/Products/wallights.jpg" alt="Solar Wall Lights" class="product-card-img">
+                    <h3>Solar Wall Lights</h3>
+                    <p>Efficient wall-mounted solar lighting solutions for homes and businesses.</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Products/postlight.jpg" alt="Solar Post Lights" class="product-card-img">
+                    <h3>Solar Post Lights</h3>
+                    <p>Durable post-mounted solar lights for pathways and outdoor areas.</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Products/securitylight.jpg" alt="Solar Security Lights" class="product-card-img">
+                    <h3>Solar Security Lights</h3>
+                    <p>Motion-activated security lighting with solar power technology.</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Products/CirculationPump.jpg" alt="Solar Circulation Pumps" class="product-card-img">
+                    <h3>Solar Circulation Pumps</h3>
+                    <p>High-efficiency solar-powered circulation pumps for water systems.</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Products/watches.jpg" alt="Solar Watches" class="product-card-img">
+                    <h3>Solar Watches</h3>
+                    <p>Eco-friendly timepieces powered by solar energy technology.</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Products/battery.jpg" alt="Lead Acid Batteries" class="product-card-img">
+                    <h3>Lithium Batteries</h3>
+                    <p>Reliable energy storage solutions for solar power systems.</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="Images/Products/inverter.jpg" alt="Inverters" class="product-card-img">
+                    <h3>Inverters</h3>
+                    <p>High-quality inverters for converting DC solar power to AC power for your home or business.</p>
+                </div>
+            
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-modal-close" onclick="closeVideoModal()">&times;</span>
+            <video id="modalVideo" controls autoplay>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-quote">"We're best qualified to take care of you"</div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Solar Energy Services Company Ltd.</h3>
+                    <p>20 years experience in solar energy solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#installations">Installations</a></li>
+                        <li><a href="index.html#repairs-maintenance">Maintenance</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Solar Water Heaters</li>
+                        <li>Solar Pool Heating</li>
+                        <li>PV Systems</li>
+                        <li>Solar Air Conditioning</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Solar Energy Services Company Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Video Modal Functions
+        function openVideoModal(videoSrc) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            video.src = videoSrc;
+            modal.style.display = 'flex';
+            video.play();
+        }
+        
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            video.pause();
+            video.src = '';
+            modal.style.display = 'none';
+        }
+        
+        // Close modal when clicking outside the video
+        window.onclick = function(event) {
+            const modal = document.getElementById('videoModal');
+            if (event.target === modal) {
+                closeVideoModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+    </script>
+</body>
+</html> 
