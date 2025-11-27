@@ -50,14 +50,22 @@
             <div class="branding-logo">
                 <img src="Images/Logo.jpg" alt="Business Logo" class="main-logo-img">
             </div>
-            <div class="branding-titles">
-                <h1 class="company-name">Solar Energy Services Company Ltd.</h1>
-                <div class="tagline">A Total Service Provider</div>
-                <div class="slogan">One Stop Shop for your Solar-Systems Needs</div>
-                <br>
-                <br>
-            </div>
-        </div>
+<div class="branding-titles">
+    <div class="company-name-container">
+        <h1 class="company-name">
+            <span class="solar-word">Solar</span> Energy Services Company Ltd.
+        </h1>
+        <div class="catch-sun-tagline">Catch the Sun!</div>
+    </div>
+    
+    <div class="slogan-container">
+        <div class="slogan">One Stop Shop for your Solar-Systems Needs</div>
+        <div class="tagline-relocated">A Total Service Provider</div>
+    </div>
+    
+    <br>
+    <br>
+</div>
     </header>
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -66,6 +74,7 @@
             <li class="nav-item"><a href="index.html#installations" class="nav-link nav-btn nav-btn-green">Installation &amp; Servicing</a></li>
             <li class="nav-item"><a href="index.html#repairs-maintenance" class="nav-link nav-btn nav-btn-green">Repair &amp; Maintenance</a></li>
             <li class="nav-item"><a href="products.html" class="nav-link nav-btn">Products</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link nav-btn nav-btn-white">See Previous Work</a></li>
             <li class="nav-item"><a href="index.html#contact" class="nav-link nav-btn nav-btn-white">Contact / Book Consultation</a></li>
         </ul>
     </nav>
@@ -132,49 +141,170 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="Images/Products/SolarAirConditioning.jpg" alt="Solar Air Conditioning" class="product-card-img">
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/AC/image1.jpg" alt="Solar AC" class="carousel-img active">
+                            <img src="Images/Products/AC/image2.jpg" alt="Solar AC" class="carousel-img">
+                            <img src="Images/Products/AC/Image3.jpg" alt="Solar AC" class="carousel-img">
+                            <img src="Images/Products/AC/image4.jpg" alt="Solar AC" class="carousel-img">
+                            <img src="Images/Products/AC/image5.jpg" alt="Solar AC" class="carousel-img">
+                            <img src="Images/Products/AC/image6.png" alt="Solar AC" class="carousel-img">
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                        </div>
                     <h3>Solar Air Conditioning</h3>
                     <p>100% solar and hybrid systems from 9000 to 36000 BTU.</p>
                 </div>
 
                 <div class="product-card">
-                    <img src="Images/Products/wallights.jpg" alt="Solar Wall Lights" class="product-card-img">
-                    <h3>Solar Wall Lights</h3>
-                    <p>Efficient wall-mounted solar lighting solutions for homes and businesses.</p>
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/SolarLights/image1.jpg" alt="Solar Lights" class="carousel-img active">
+                            <img src="Images/Products/SolarLights/image2.jpg" alt="Solar Lights" class="carousel-img">
+                            <img src="Images/Products/SolarLights/image3.png" alt="Solar Lights" class="carousel-img">
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                    </div>
+                    <h3>Solar Lights</h3>
+                    <p>Reliable, energy-efficient solar-powered lights designed to illuminate outdoor spaces with bright, long-lasting performance.and guaranteed performance.</p>
                 </div>
+
                 <div class="product-card">
-                    <img src="Images/Products/postlight.jpg" alt="Solar Post Lights" class="product-card-img">
-                    <h3>Solar Post Lights</h3>
-                    <p>Durable post-mounted solar lights for pathways and outdoor areas.</p>
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/ChargeCon/image1.jpg" alt="Charge Controller" class="carousel-img active">
+                            <img src="Images/Products/ChargeCon/image2.jpg" alt="Charge Controller" class="carousel-img">
+
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                    </div>
+                    <h3>Charge Controllers</h3>
+                    <p>Reliable solar charge controllers designed to regulate power flow, protect batteries, and ensure efficient energy management.</p>
                 </div>
+
                 <div class="product-card">
-                    <img src="Images/Products/securitylight.jpg" alt="Solar Security Lights" class="product-card-img">
-                    <h3>Solar Security Lights</h3>
-                    <p>Motion-activated security lighting with solar power technology.</p>
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/Battery/image1.jpg" alt="Battery" class="carousel-img active">
+                            <img src="Images/Products/Battery/image2.jpg" alt="Battery" class="carousel-img"> 
+                            <img src="Images/Products/Battery/image3.jpg" alt="Battery" class="carousel-img">
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                            </div>
+                    <h3>Lithium Batteries</h3>
+                    <p>Reliable energy storage solutions for solar power systems.</p>
                 </div>
+
+                <div class="product-card">
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/Inverter/image1.jpg" alt="Inverter" class="carousel-img active">
+                            <img src="Images/Products/Inverter/image4.jpg" alt="Inverter" class="carousel-img"> 
+                            <img src="Images/Products/Inverter/image2.jpg" alt="Inverter" class="carousel-img">
+                            <img src="Images/Products/Inverter/image5.jpg" alt="Inverter" class="carousel-img">
+                            <img src="Images/Products/Inverter/image3.jpg" alt="Inverter" class="carousel-img">
+                            <img src="Images/Products/Inverter/image6.jpg" alt="Inverter" class="carousel-img">   
+                               
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                            </div>            
+                    <h3>Inverters</h3>
+                    <p>High-quality inverters for converting DC solar power to AC power for your home or business.</p>
+                </div>
+
                 <div class="product-card">
                     <img src="Images/Products/CirculationPump.jpg" alt="Solar Circulation Pumps" class="product-card-img">
-                    <h3>Solar Circulation Pumps</h3>
+                    <h3>Hot Water Circulation Pumps</h3>
                     <p>High-efficiency solar-powered circulation pumps for water systems.</p>
+                    <a href="Images/Products/Solar Circulation Pump.pdf" target="_blank" class="learn-more-btn">Learn More</a>
                 </div>
                 <div class="product-card">
                     <img src="Images/Products/watches.jpg" alt="Solar Watches" class="product-card-img">
                     <h3>Solar Watches</h3>
                     <p>Eco-friendly timepieces powered by solar energy technology.</p>
                 </div>
-                <div class="product-card">
-                    <img src="Images/Products/battery.jpg" alt="Lead Acid Batteries" class="product-card-img">
-                    <h3>Lithium Batteries</h3>
-                    <p>Reliable energy storage solutions for solar power systems.</p>
-                </div>
-                
-                <div class="product-card">
-                    <img src="Images/Products/inverter.jpg" alt="Inverters" class="product-card-img">
-                    <h3>Inverters</h3>
-                    <p>High-quality inverters for converting DC solar power to AC power for your home or business.</p>
-                </div>
             
                 
+            </div>
+        </div>
+    </section>
+
+    <!-- See More Products Section -->
+    <section class="see-more-products" id="see-more-products">
+        <div class="container">
+            <h2 class="see-more-heading">Additional Products</h2>
+            
+            <!-- AC/DC Inverter Product -->
+            <div class="featured-product">
+                <div class="product-card featured-card">
+                    <div class="image-carousel">
+                        <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                        <div class="carousel-images">
+                            <img src="Images/Products/Isolators/ACIso.avif" alt="AC/DC Inverter" class="carousel-img active">
+                            <img src="Images/Products/Isolators/DCIso.jpg" alt="AC/DC Inverter" class="carousel-img">
+                        </div>
+                        <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                    </div>
+                    <h3>AC/DC Isolator</h3>
+                    <p>High-performance AC/DC inverter designed for efficient power conversion in solar energy systems. Features advanced technology for reliable operation and optimal energy management.</p>
+                    <button class="learn-more-btn" onclick="openVideoModal('Images/Products/Isolators/video.mp4')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Solar Heat Extractors Section -->
+            <div class="heat-extractors-section">
+    
+                <h3 class="section-subtitle">Solar Heat Extractors</h3>
+                <div class="catalogue-link-container">
+                    <a href="Images/Products/HeatExtract/EntireLog.pdf" target="_blank" class="catalogue-link">
+                        📋 See Entire Catalogue
+                    </a>
+                </div>
+                <div class="products-grid heat-extractors-grid">
+                    <div class="product-card">
+                        <div class="image-carousel">
+                            <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                            <div class="carousel-images">
+                                <img src="Images/Products/HeatExtract/exhimage2.jpg" alt="Solar Heat Extractor" class="carousel-img active">
+                                <img src="Images/Products/HeatExtract/exhimage3.jpg" alt="Solar Heat Extractor" class="carousel-img">
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                            </div>
+                        <h4>Solar Roof Ventilator</h4>
+                        <p>A roof mounted axial type solar powered active ventilation fan, driven by 
+                            brushless DC motor and run for air exchanging, to improve air circulation in 
+                            roof cavity or attic space freely at no energy cost.</p>
+                        <a href="Images/Products/HeatExtract/ventilation.pdf" target="_blank" class="learn-more-btn">Learn More</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="image-carousel">
+                            <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
+                            <div class="carousel-images">
+                                <img src="Images/Products/HeatExtract/wallfan.jpg" alt="Solar Heat Extractor" class="carousel-img active">
+                                <img src="Images/Products/HeatExtract/wallfan2.png" alt="Solar Heat Extractor" class="carousel-img">
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
+                            </div>
+                        <h4>Solar Wall Fan</h4>
+                        <p>A multi-purpose wall mounted axial type solar powered active extracting fan, 
+                            driven by brushless DC motor and run for air exchanging, to improve air 
+                            circulation freely at no cost.</p>
+                        <a href="Images/Products/HeatExtract/wallfan.pdf" target="_blank" class="learn-more-btn">Learn More</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="Images/Products/HeatExtract/ceilingfan.jpg" alt="Solar Heat Extractor Model C" class="product-card-img">
+                        <h4>Solar Ceiling Fan</h4>
+                        <p>Advanced solar heat extraction system with smart controls and maximum efficiency ratings.</p>
+                        <a href="Images/Products/HeatExtract/CeilingFan.pdf" target="_blank" class="learn-more-btn">Learn More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -226,7 +356,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Solar Energy Services Company Ltd. All rights reserved.</p>
+                <p>&copy; 2025 Solar Energy Services Company Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>

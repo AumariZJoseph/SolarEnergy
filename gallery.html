@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery - Solar Energy Services Company Ltd.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Branding/Header Section -->
+    <header class="branding-header">
+        <div class="branding-slideshow-bg">
+            <div class="branding-slideshow-container">
+                <div class="branding-slide-bg active" style="background-image: url('Images/MegaSun5.jpg');"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/pvsystem.png');"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/secrets.png');"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/Slideshow/image1.jpg');"></div>
+            </div>
+            <div class="branding-overlay"></div>
+        </div>
+
+        <div class="branding-row">
+            <div class="branding-logo">
+                <img src="Images/Logo.jpg" alt="Business Logo" class="main-logo-img">
+            </div>
+            <div class="branding-titles">
+                <div class="company-name-container">
+                    <h1 class="company-name">
+                        <span class="solar-word">Solar</span> Energy Services Company Ltd.
+                    </h1>
+                    <div class="catch-sun-tagline">Catch the Sun!</div>
+                </div>
+                
+                <div class="slogan-container">
+                    <div class="slogan">One Stop Shop for your Solar-Systems Needs</div>
+                    <div class="tagline-relocated">A Total Service Provider</div>
+                </div>
+
+                <br><br>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-menu nav-horizontal">
+            <li class="nav-item"><a href="index.html" class="nav-link nav-btn nav-btn-white">Home</a></li>
+            <li class="nav-item"><a href="index.html#installations" class="nav-link nav-btn nav-btn-green">Installation &amp; Servicing</a></li>
+            <li class="nav-item"><a href="index.html#repairs-maintenance" class="nav-link nav-btn nav-btn-green">Repair &amp; Maintenance</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link nav-btn nav-btn-white">Products</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link nav-btn">See Previous Work</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link nav-btn nav-btn-white">Contact / Book Consultation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Page Section -->
+    <section class="gallery-page" id="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="gallery-heading">Our Project Gallery</h2>
+                <p class="gallery-subtitle">Showcasing our solar energy installations and successful projects</p>
+            </div>
+
+            <!-- ✅ UPDATED GALLERY GRID -->
+            <div class="gallery-grid">
+
+                <!-- First large + small group -->
+                <div class="gallery-item large" onclick="openLightbox('Images/Projects/project1.jpg', 'PV System Installation')">
+                    <img src="Images/Projects/project1.jpg" alt="Solar Installation Project 1" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project2.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project2.jpg" alt="Solar Installation Project 2" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project3.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project3.jpg" alt="Solar Installation Project 3" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project4.JPG', 'PV System Installation')">
+                    <img src="Images/Projects/project4.JPG" alt="Solar Installation Project 4" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project5.JPG', 'PV System Installation')">
+                    <img src="Images/Projects/project5.JPG" alt="Solar Installation Project 5" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <!-- Second large + small group -->
+                <div class="gallery-item large" onclick="openLightbox('Images/Projects/project6.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project6.jpg" alt="Solar Installation Project 6" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project7.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project7.jpg" alt="Solar Installation Project 7" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project8.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project8.jpg" alt="Solar Installation Project 8" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project9.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project9.jpg" alt="Solar Installation Project 9" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project11.JPG', 'Solar Roof Ventilator Installation')">
+                    <img src="Images/Projects/project11.JPG" alt="Solar Installation Project 11" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+
+                <!-- Standalone bottom -->
+                <div class="gallery-item" onclick="openLightbox('Images/Projects/project10.jpg', 'Solar Water Heater Installation')">
+                    <img src="Images/Projects/project10.jpg" alt="Solar Installation Project 10" class="gallery-img">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+
+            <div class="lightbox-navigation">
+                <button class="lightbox-btn lightbox-prev" onclick="changeLightboxImage(-1)">‹</button>
+                <button class="lightbox-btn lightbox-next" onclick="changeLightboxImage(1)">›</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-quote">"We're best qualified to take care of you"</div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Solar Energy Services Company Ltd.</h3>
+                    <p>20 years experience in solar energy solutions</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#installations">Installations</a></li>
+                        <li><a href="index.html#repairs-maintenance">Maintenance</a></li>
+                        <li><a href="gallery.html">See Previous Work</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Solar Water Heaters</li>
+                        <li>Solar Pool Heating</li>
+                        <li>PV Systems</li>
+                        <li>Solar Air Conditioning</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Solar Energy Services Company Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const galleryImages = [
+            { src: 'Images/Projects/project1.jpg', caption: 'Solar Installation Project 1' },
+            { src: 'Images/Projects/project2.jpg', caption: 'Solar Installation Project 2' },
+            { src: 'Images/Projects/project3.jpg', caption: 'Solar Installation Project 3' },
+            { src: 'Images/Projects/project4.JPG', caption: 'Solar Installation Project 4' },
+            { src: 'Images/Projects/project5.JPG', caption: 'Solar Installation Project 5' },
+            { src: 'Images/Projects/project6.jpg', caption: 'Solar Installation Project 6' },
+            { src: 'Images/Projects/project7.jpg', caption: 'Solar Installation Project 7' },
+            { src: 'Images/Projects/project8.jpg', caption: 'Solar Installation Project 8' },
+            { src: 'Images/Projects/project9.jpg', caption: 'Solar Installation Project 9' },
+            { src: 'Images/Projects/project10.jpg', caption: 'Solar Installation Project 10' },
+            { src: 'Images/Projects/project11.JPG', caption: 'Solar Installation Project 11' }
+        ];
+
+        let currentImageIndex = 0;
+
+        function openLightbox(imageSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+
+            currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
+
+            img.src = imageSrc;
+            cap.textContent = caption;
+
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeLightboxImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            else if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+
+            img.src = galleryImages[currentImageIndex].src;
+            cap.textContent = galleryImages[currentImageIndex].caption;
+        }
+
+        window.onclick = e => {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        };
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+            if (e.key === 'ArrowRight') changeLightboxImage(1);
+        });
+    </script>
+</body>
+</html>

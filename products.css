@@ -326,129 +326,7 @@ body {
         right: 10px;
     }
 }
-/* Header, Navbar, Footer Consistency */
-.branding-header {
-    width: 100%;
-    position: relative;
-    padding: 2.5rem 0 0 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-bottom: 0;
-}
-
-/* Branding Header Background Slideshow */
-.branding-slideshow-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.branding-slideshow-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.branding-slide-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-    will-change: opacity;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.branding-slide-bg.active {
-    opacity: 1;
-    z-index: 1;
-}
-
-.branding-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7);
-    z-index: 2;
-}
-
-.branding-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 3;
-}
-.branding-logo {
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-}
-.main-logo-img {
-    height: 200px;
-    width: auto;
-    max-width: 220px;
-    object-fit: contain;
-    display: block;
-    filter: drop-shadow(0 4px 16px rgba(46,139,87,0.13));
-}
-.branding-titles {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-.company-name {
-    font-size: 4rem;
-    font-weight: 900;
-    color: #2ecc40;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    margin: 0 auto;
-    letter-spacing: 1.5px;
-    line-height: 1.1;
-    text-align: center;
-    width: 100%;
-}
-.tagline {
-    color: #b80000;
-    font-style: italic;
-    font-weight: 700;
-    text-decoration: underline;
-    font-size: 1.3rem;
-    margin-bottom: 0.2rem;
-}
-.slogan {
-    background: var(--primary-green);
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding: 0.7rem 2.2rem;
-    margin-top: 0.5rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(46,139,87,0.08);
-    letter-spacing: 0.5px;
-    width: 100%;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* Header, Navbar, Footer Consistency - All branding styles removed to use styles.css */
 
 .footer {
     background: #343a40;
@@ -504,26 +382,8 @@ body {
     border-top: 1px solid var(--gray);
     color: var(--gray);
 }
-@media (max-width: 1024px) {
-    .branding-row { gap: 1.2rem; }
-    .main-logo-img { height: 100px; max-width: 140px; }
-    .company-name { font-size: 2.5rem; }
-    .tagline { font-size: 1.05rem; }
-    .slogan { font-size: 1.1rem; padding: 0.5rem 1.2rem; }
-}
-@media (max-width: 768px) {
-    .branding-row { flex-direction: column; align-items: center; gap: 0.7rem; }
-    .branding-titles { align-items: center; text-align: center; }
-    .main-logo-img { height: 75px; max-width: 100px; }
-    .company-name { font-size: 1.5rem; }
-    .tagline { font-size: 0.9rem; }
-    .slogan { font-size: 0.95rem; padding: 0.4rem 0.7rem; }
-}
+/* Responsive styles for products page - branding styles removed to use styles.css */
 @media (max-width: 480px) {
-    .main-logo-img { height: 45px; max-width: 60px; }
-    .company-name { font-size: 1.1rem; }
-    .tagline { font-size: 0.7rem; }
-    .slogan { font-size: 0.7rem; padding: 0.3rem 0.4rem; }
     
     .carousel-arrow {
         width: 32px;
@@ -542,4 +402,233 @@ body {
     .carousel-arrow {
         opacity: 0.9;
     }
-} 
+}
+
+/* ------------------------------------------------------ */
+/* SLOGAN CONTAINER FOR PRODUCTS PAGE - matches styles.css */
+/* ------------------------------------------------------ */
+.slogan-container {
+    position: relative;
+    background: var(--primary-green);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0.7rem 2.2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(46,139,87,0.08);
+    letter-spacing: 0.5px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.tagline-relocated {
+    position: absolute;
+    bottom: -0.8rem;
+    right: 1.5rem;
+    color: #b80000;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    background: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive for slogan-container */
+@media (max-width: 1024px) {
+    .slogan-container { font-size: 1.1rem; padding: 0.5rem 1.2rem; }
+    .tagline-relocated { 
+        font-size: 0.8rem; 
+        right: 1rem; 
+        bottom: -0.6rem;
+        padding: 0.15rem 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan-container { font-size: 0.95rem; padding: 0.4rem 0.7rem; }
+    .tagline-relocated { 
+        font-size: 0.7rem; 
+        right: 0.7rem; 
+        bottom: -0.5rem;
+        padding: 0.1rem 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan-container { font-size: 0.7rem; padding: 0.3rem 0.4rem; }
+    .tagline-relocated { 
+        font-size: 0.6rem; 
+        right: 0.4rem; 
+        bottom: -0.4rem;
+        padding: 0.1rem 0.3rem;
+    }
+}
+
+/* See More Products Section */
+.see-more-products {
+    background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+    padding: 80px 0;
+    margin-top: 40px;
+}
+
+.see-more-heading {
+    text-align: center;
+    color: #43b843;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 12px rgba(67,184,67,0.08);
+}
+
+.featured-product {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.featured-card {
+    max-width: 400px;
+    background: linear-gradient(135deg, #fff 0%, #f9fff9 100%);
+    border: 2px solid #43b843;
+    box-shadow: 0 8px 32px rgba(67,184,67,0.15);
+}
+
+.featured-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 16px 48px rgba(67,184,67,0.25);
+}
+
+.heat-extractors-section {
+    margin-top: 3rem;
+}
+
+.catalogue-link-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.catalogue-link {
+    display: inline-block;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.catalogue-link:hover {
+    color: #43b843;
+    border-color: #43b843;
+    background: #f4fff4;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.section-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #43b843, #2e7d32);
+    border-radius: 2px;
+}
+
+.heat-extractors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.heat-extractors-grid .product-card {
+    background: linear-gradient(135deg, #fff 0%, #f4fff4 100%);
+    border: 1.5px solid #c8e6c9;
+    transition: all 0.3s ease;
+}
+
+.heat-extractors-grid .product-card:hover {
+    border-color: #43b843;
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 36px rgba(67,184,67,0.2);
+}
+
+.heat-extractors-grid .product-card h4 {
+    color: #2e7d32;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive styles for See More Products */
+@media (max-width: 768px) {
+    .see-more-products {
+        padding: 60px 0;
+    }
+    
+    .see-more-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    
+    .featured-product {
+        margin-bottom: 3rem;
+    }
+    
+    .heat-extractors-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .see-more-products {
+        padding: 40px 0;
+    }
+    
+    .see-more-heading {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .featured-card {
+        margin: 0 1rem;
+    }
+}
+
