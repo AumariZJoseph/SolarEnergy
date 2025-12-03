@@ -970,7 +970,8 @@ html {
 .tagline-relocated {
     position: absolute;
     bottom: -0.8rem;
-    right: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     color: #b80000;
     font-style: italic;
     font-weight: 600;
@@ -980,6 +981,8 @@ html {
     padding: 0.2rem 0.8rem;
     border-radius: 12px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: max-content; /* Prevents it from being too narrow */
 }
 
 /* Responsive for alternative */
