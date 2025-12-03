@@ -31,12 +31,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="gallery.css" as="style">
+    <link rel="preload" href="Images/Logo.jpg" as="image" fetchpriority="high">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Optimized font loading with font-display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Defer Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 </head>
 <body>
     <!-- Branding/Header Section -->
@@ -53,7 +57,7 @@
 
         <div class="branding-row">
             <div class="branding-logo">
-                <img src="Images/Logo.jpg" alt="Solar Energy Services Company Ltd. - Professional Solar Installation and Maintenance Services in St. Lucia" class="main-logo-img">
+                <img src="Images/Logo.jpg" alt="Solar Energy Services Company Ltd. - Professional Solar Installation and Maintenance Services in St. Lucia" class="main-logo-img" width="140" height="120" loading="eager" fetchpriority="high">
             </div>
             <div class="branding-titles">
                 <div class="company-name-container">
@@ -75,6 +79,11 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu nav-horizontal">
             <li class="nav-item"><a href="index.html" class="nav-link nav-btn nav-btn-white">Home</a></li>
             <li class="nav-item"><a href="index.html#installations" class="nav-link nav-btn nav-btn-green">Installation &amp; Servicing</a></li>
@@ -98,59 +107,59 @@
 
                 <!-- First large + small group -->
                 <div class="gallery-item large" onclick="openLightbox('Images/Projects/project1.jpg', 'PV System Installation')">
-                    <img src="Images/Projects/project1.jpg" alt="Solar PV system installation on residential roof in St. Lucia showing professional solar panel mounting" class="gallery-img">
+                    <img src="Images/Projects/project1.jpg" alt="Solar PV system installation on residential roof in St. Lucia showing professional solar panel mounting" class="gallery-img" loading="eager" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project2.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project2.jpg" alt="Evacuated tube solar water heater installation on residential property in St. Lucia" class="gallery-img">
+                    <img src="Images/Projects/project2.jpg" alt="Evacuated tube solar water heater installation on residential property in St. Lucia" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project3.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project3.jpg" alt="Professional solar water heater system installation with storage tank and solar collectors" class="gallery-img">
+                    <img src="Images/Projects/project3.jpg" alt="Professional solar water heater system installation with storage tank and solar collectors" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project4.JPG', 'PV System Installation')">
-                    <img src="Images/Projects/project4.JPG" alt="Grid-tie solar PV system installation with multiple solar panels generating renewable electricity" class="gallery-img">
+                    <img src="Images/Projects/project4.JPG" alt="Grid-tie solar PV system installation with multiple solar panels generating renewable electricity" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project5.JPG', 'PV System Installation')">
-                    <img src="Images/Projects/project5.JPG" alt="Commercial solar photovoltaic system installation showing large-scale solar panel array" class="gallery-img">
+                    <img src="Images/Projects/project5.JPG" alt="Commercial solar photovoltaic system installation showing large-scale solar panel array" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <!-- Second large + small group -->
                 <div class="gallery-item large" onclick="openLightbox('Images/Projects/project6.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project6.jpg" alt="Mega Sun evacuated tube solar water heater installation on Caribbean home roof" class="gallery-img">
+                    <img src="Images/Projects/project6.jpg" alt="Mega Sun evacuated tube solar water heater installation on Caribbean home roof" class="gallery-img" loading="lazy" width="400" height="600">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project7.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project7.jpg" alt="Solar water heater system with vacuum tube collectors installed for optimal sun exposure" class="gallery-img">
+                    <img src="Images/Projects/project7.jpg" alt="Solar water heater system with vacuum tube collectors installed for optimal sun exposure" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project8.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project8.jpg" alt="Residential solar water heating system installation completed by professional solar technicians" class="gallery-img">
+                    <img src="Images/Projects/project8.jpg" alt="Residential solar water heating system installation completed by professional solar technicians" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project9.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project9.jpg" alt="High-efficiency solar water heater installation with evacuated tube technology in St. Lucia" class="gallery-img">
+                    <img src="Images/Projects/project9.jpg" alt="High-efficiency solar water heater installation with evacuated tube technology in St. Lucia" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project11.JPG', 'Solar Roof Ventilator Installation')">
-                    <img src="Images/Projects/project11.JPG" alt="Solar-powered roof ventilator installation for improved air circulation and heat extraction" class="gallery-img">
+                    <img src="Images/Projects/project11.JPG" alt="Solar-powered roof ventilator installation for improved air circulation and heat extraction" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
 
                 <!-- Standalone bottom -->
                 <div class="gallery-item" onclick="openLightbox('Images/Projects/project10.jpg', 'Solar Water Heater Installation')">
-                    <img src="Images/Projects/project10.jpg" alt="Complete solar water heater installation showing professional workmanship and quality components" class="gallery-img">
+                    <img src="Images/Projects/project10.jpg" alt="Complete solar water heater installation showing professional workmanship and quality components" class="gallery-img" loading="lazy" width="400" height="300">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
                 </div>
             </div>
@@ -219,6 +228,15 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        // Critical: Prevent layout shift for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        }
+    </script>
 
     <script>
         const galleryImages = [

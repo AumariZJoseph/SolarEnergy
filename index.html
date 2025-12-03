@@ -42,12 +42,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="Images/Logo.jpg" as="image">
+    <link rel="preload" href="Images/Logo.jpg" as="image" fetchpriority="high">
     
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Optimized font loading with font-display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Defer Font Awesome - load only icons we need -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -133,16 +136,16 @@
         <!-- Branding Header Background Slideshow -->
         <div class="branding-slideshow-bg">
             <div class="branding-slideshow-container">
-                <div class="branding-slide-bg active" style="background-image: url('Images/MegaSun5.jpg');"></div>
-                <div class="branding-slide-bg" style="background-image: url('Images/pvsystem.png');"></div>
-                <div class="branding-slide-bg" style="background-image: url('Images/secrets.png');"></div>
-                <div class="branding-slide-bg" style="background-image: url('Images/Slideshow/image1.jpg');"></div>
+                <div class="branding-slide-bg active" style="background-image: url('Images/MegaSun5.jpg');" loading="lazy"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/pvsystem.png');" loading="lazy"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/secrets.png');" loading="lazy"></div>
+                <div class="branding-slide-bg" style="background-image: url('Images/Slideshow/image1.jpg');" loading="lazy"></div>
             </div>
             <div class="branding-overlay"></div>
         </div>
         <div class="branding-row">
             <div class="branding-logo">
-                <img src="Images/Logo.jpg" alt="Solar Energy Services Company Ltd. - Professional Solar Installation and Maintenance Services in St. Lucia" class="main-logo-img">
+                <img src="Images/Logo.jpg" alt="Solar Energy Services Company Ltd. - Professional Solar Installation and Maintenance Services in St. Lucia" class="main-logo-img" width="140" height="120" loading="eager" fetchpriority="high">
             </div>
             <div class="branding-titles">
                 <div class="company-name-container">
@@ -163,6 +166,11 @@
     </header>
     <!-- Navigation Bar -->
     <nav class="navbar">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu nav-horizontal">
             <li class="nav-item"><a href="#" class="nav-link nav-btn nav-btn-white">Home</a></li>
             <li class="nav-item"><a href="#installations" class="nav-link nav-btn nav-btn-green">Installation &amp; Servicing</a></li>
@@ -176,11 +184,11 @@
     <!-- Hero Section with Slideshow -->
     <section class="hero-slideshow">
         <div class="hero-slideshow-container">
-            <div class="hero-slide active" style="background-image: url('Images/Slideshow/image1.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/Slideshow/image2.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/Slideshow/image3.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/Slideshow/image4.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/Slideshow/image5.jpg');"></div>
+            <div class="hero-slide active" style="background-image: url('Images/Slideshow/image1.jpg');" loading="eager"></div>
+            <div class="hero-slide" style="background-image: url('Images/Slideshow/image2.jpg');" loading="lazy"></div>
+            <div class="hero-slide" style="background-image: url('Images/Slideshow/image3.jpg');" loading="lazy"></div>
+            <div class="hero-slide" style="background-image: url('Images/Slideshow/image4.jpg');" loading="lazy"></div>
+            <div class="hero-slide" style="background-image: url('Images/Slideshow/image5.jpg');" loading="lazy"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -266,7 +274,7 @@
                     </ul>
                 </div>
                 <div class="product-image">
-                    <img src="Images/MegaSun2.jpg" alt="Mega Sun evacuated tube solar water heater system installed on roof in St. Lucia" class="featured-product-img">
+                    <img src="Images/MegaSun2.jpg" alt="Mega Sun evacuated tube solar water heater system installed on roof in St. Lucia" class="featured-product-img" width="420" height="315" loading="lazy">
                     <a href="products.html" class="cta-button">Visit Our Products Page</a>
                 </div>
             </div>
@@ -616,5 +624,15 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        // Critical: Prevent layout shift for images
+        if ('loading' in HTMLImageElement.prototype) {
+            // Native lazy loading supported
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        }
+    </script>
 </body>
 </html> 

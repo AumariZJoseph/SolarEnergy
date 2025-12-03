@@ -31,12 +31,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="products.css" as="style">
+    <link rel="preload" href="Images/Logo.jpg" as="image" fetchpriority="high">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="products.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Optimized font loading with font-display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Defer Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     <script>
         // Simple carousel function - must be defined early
         function changeImage(btn, direction) {
@@ -77,7 +81,7 @@
         </div>
         <div class="branding-row">
             <div class="branding-logo">
-                <img src="Images/Logo.jpg" alt="Solar Energy Services Company Ltd. - Professional Solar Installation and Maintenance Services in St. Lucia" class="main-logo-img">
+                <img src="Images/Logo.jpg" alt="Solar Energy Services Company Ltd. - Professional Solar Installation and Maintenance Services in St. Lucia" class="main-logo-img" width="140" height="120" loading="eager" fetchpriority="high">
             </div>
 <div class="branding-titles">
     <div class="company-name-container">
@@ -98,6 +102,11 @@
     </header>
     <!-- Navigation Bar -->
     <nav class="navbar">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu nav-horizontal">
             <li class="nav-item"><a href="index.html" class="nav-link nav-btn nav-btn-white">Home</a></li>
             <li class="nav-item"><a href="index.html#installations" class="nav-link nav-btn nav-btn-green">Installation &amp; Servicing</a></li>
@@ -116,9 +125,9 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/MegaSun2.jpg" alt="Mega Sun evacuated tube solar water heater system installed on residential roof in St. Lucia" class="carousel-img active">
-                            <img src="Images/MegaSun3.jpg" alt="Close-up view of evacuated tube solar water heater vacuum tubes showing high-efficiency design" class="carousel-img">
-                            <img src="Images/MegaSun4.jpg" alt="Professional solar water heater installation showing complete system with storage tank and solar collectors" class="carousel-img">
+                            <img src="Images/MegaSun2.jpg" alt="Mega Sun evacuated tube solar water heater system installed on residential roof in St. Lucia" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/MegaSun3.jpg" alt="Close-up view of evacuated tube solar water heater vacuum tubes showing high-efficiency design" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/MegaSun4.jpg" alt="Professional solar water heater installation showing complete system with storage tank and solar collectors" class="carousel-img" width="180" height="180" loading="lazy">
                         </div>
                         <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                     </div>
@@ -129,9 +138,9 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/pvsystem.jpg" alt="Solar PV system installation with solar panels on roof generating renewable electricity in St. Lucia" class="carousel-img active">
-                            <img src="Images/Products/pvsystem2.jpg" alt="Grid-tie solar photovoltaic system showing solar panels and inverter for residential energy generation" class="carousel-img">
-                            <img src="Images/Products/pvsystem3.jpg" alt="Commercial solar PV system installation with multiple solar panels for business energy needs" class="carousel-img">
+                            <img src="Images/Products/pvsystem.jpg" alt="Solar PV system installation with solar panels on roof generating renewable electricity in St. Lucia" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/pvsystem2.jpg" alt="Grid-tie solar photovoltaic system showing solar panels and inverter for residential energy generation" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/pvsystem3.jpg" alt="Commercial solar PV system installation with multiple solar panels for business energy needs" class="carousel-img" width="180" height="180" loading="lazy">
                         </div>
                         <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                     </div>
@@ -143,9 +152,9 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/poolheat.jpg" alt="Solar Pool Heating" class="carousel-img active">
-                            <img src="Images/Products/poolheat2.jpg" alt="Solar Pool Heating" class="carousel-img">
-                            <img src="Images/Products/poolheat3.jpg" alt="Solar Pool Heating" class="carousel-img">
+                            <img src="Images/Products/poolheat.jpg" alt="Solar Pool Heating" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/poolheat2.jpg" alt="Solar Pool Heating" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/poolheat3.jpg" alt="Solar Pool Heating" class="carousel-img" width="180" height="180" loading="lazy">
                         </div>
                         <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                     </div>
@@ -156,14 +165,14 @@
 
                 <div class="product-card solatube-card">
                     <span class="new-product-badge">New Product!</span>
-                    <img src="Images/Products/Solatube.png" alt="SolaTube natural daylighting system bringing sunlight into interior spaces without electricity in St. Lucia" class="product-card-img">
+                    <img src="Images/Products/Solatube.png" alt="SolaTube natural daylighting system bringing sunlight into interior spaces without electricity in St. Lucia" class="product-card-img" width="180" height="180" loading="lazy">
                     <h3>SolaTube</h3>
                     <p>Bring natural daylight to spaces up to 300 sq. ft — kitchens, living rooms, baths, and more. Enjoy bright, beautiful light without using electricity. Save big with SolaTube.</p>
                     <button class="learn-more-btn" onclick="openVideoModal('Images/Products/Solatube-video.mp4')">Learn More</button>
                 </div>
 
                 <div class="product-card">
-                    <img src="Images/Products/solarpanel2.jpg" alt="High-efficiency solar panels for residential and commercial solar energy systems in St. Lucia" class="product-card-img">
+                    <img src="Images/Products/solarpanel2.jpg" alt="High-efficiency solar panels for residential and commercial solar energy systems in St. Lucia" class="product-card-img" width="180" height="180" loading="lazy">
                     <h3>Solar Panels</h3>
                     <p>Premium solar panels with high efficiency ratings for maximum energy generation.</p>
                     <a href="Images/Products/Tanfon-Half-Cell-Solar-Panel-410W-600W.pdf" target="_blank" class="learn-more-btn">Learn More</a>
@@ -173,12 +182,12 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/AC/Image1.jpg" alt="Solar AC" class="carousel-img active">
-                            <img src="Images/Products/AC/Image2.jpg" alt="Solar AC" class="carousel-img">
-                            <img src="Images/Products/AC/Image3.jpg" alt="Solar AC" class="carousel-img">
-                            <img src="Images/Products/AC/image4.jpg" alt="Solar AC" class="carousel-img">
-                            <img src="Images/Products/AC/image5.jpg" alt="Solar AC" class="carousel-img">
-                            <img src="Images/Products/AC/image6.png" alt="Solar AC" class="carousel-img">
+                            <img src="Images/Products/AC/Image1.jpg" alt="Solar AC" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/AC/Image2.jpg" alt="Solar AC" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/AC/Image3.jpg" alt="Solar AC" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/AC/image4.jpg" alt="Solar AC" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/AC/image5.jpg" alt="Solar AC" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/AC/image6.png" alt="Solar AC" class="carousel-img" width="180" height="180" loading="lazy">
                             </div>
                             <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                         </div>
@@ -190,9 +199,9 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/SolarLights/Image1.jpg" alt="Solar Lights" class="carousel-img active">
-                            <img src="Images/Products/SolarLights/image2.jpg" alt="Solar Lights" class="carousel-img">
-                            <img src="Images/Products/SolarLights/image3.png" alt="Solar Lights" class="carousel-img">
+                            <img src="Images/Products/SolarLights/Image1.jpg" alt="Solar Lights" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/SolarLights/image2.jpg" alt="Solar Lights" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/SolarLights/image3.png" alt="Solar Lights" class="carousel-img" width="180" height="180" loading="lazy">
                         </div>
                         <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                     </div>
@@ -204,8 +213,8 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/ChargeCon/image1.jpg" alt="Charge Controller" class="carousel-img active">
-                            <img src="Images/Products/ChargeCon/image2.jpg" alt="Charge Controller" class="carousel-img">
+                            <img src="Images/Products/ChargeCon/image1.jpg" alt="Charge Controller" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/ChargeCon/image2.jpg" alt="Charge Controller" class="carousel-img" width="180" height="180" loading="lazy">
 
                         </div>
                         <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
@@ -218,9 +227,9 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/Battery/image1.jpg" alt="Battery" class="carousel-img active">
-                            <img src="Images/Products/Battery/image2.jpg" alt="Battery" class="carousel-img"> 
-                            <img src="Images/Products/Battery/image3.jpg" alt="Battery" class="carousel-img">
+                            <img src="Images/Products/Battery/image1.jpg" alt="Battery" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/Battery/image2.jpg" alt="Battery" class="carousel-img" width="180" height="180" loading="lazy"> 
+                            <img src="Images/Products/Battery/image3.jpg" alt="Battery" class="carousel-img" width="180" height="180" loading="lazy">
                             </div>
                             <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                             </div>
@@ -232,12 +241,12 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/Inverter/image1.jpg" alt="Inverter" class="carousel-img active">
-                            <img src="Images/Products/Inverter/image4.jpg" alt="Inverter" class="carousel-img"> 
-                            <img src="Images/Products/Inverter/image2.jpg" alt="Inverter" class="carousel-img">
-                            <img src="Images/Products/Inverter/image5.jpg" alt="Inverter" class="carousel-img">
-                            <img src="Images/Products/Inverter/image3.jpg" alt="Inverter" class="carousel-img">
-                            <img src="Images/Products/Inverter/image6.jpg" alt="Inverter" class="carousel-img">   
+                            <img src="Images/Products/Inverter/image1.jpg" alt="Inverter" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/Inverter/image4.jpg" alt="Inverter" class="carousel-img" width="180" height="180" loading="lazy"> 
+                            <img src="Images/Products/Inverter/image2.jpg" alt="Inverter" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/Inverter/image5.jpg" alt="Inverter" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/Inverter/image3.jpg" alt="Inverter" class="carousel-img" width="180" height="180" loading="lazy">
+                            <img src="Images/Products/Inverter/image6.jpg" alt="Inverter" class="carousel-img" width="180" height="180" loading="lazy">   
                                
                             </div>
                             <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
@@ -247,13 +256,13 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="Images/Products/CirculationPump.jpg" alt="Solar Circulation Pumps" class="product-card-img">
+                    <img src="Images/Products/CirculationPump.jpg" alt="Solar Circulation Pumps" class="product-card-img" width="180" height="180" loading="lazy">
                     <h3>Hot Water Circulation Pumps</h3>
                     <p>High-efficiency solar-powered circulation pumps for water systems.</p>
                     <a href="Images/Products/Solar Circulation Pump.pdf" target="_blank" class="learn-more-btn">Learn More</a>
                 </div>
                 <div class="product-card">
-                    <img src="Images/Products/watches.jpg" alt="Solar Watches" class="product-card-img">
+                    <img src="Images/Products/watches.jpg" alt="Solar Watches" class="product-card-img" width="180" height="180" loading="lazy">
                     <h3>Solar Watches</h3>
                     <p>Eco-friendly timepieces powered by solar energy technology.</p>
                 </div>
@@ -274,8 +283,8 @@
                     <div class="image-carousel">
                         <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                         <div class="carousel-images">
-                            <img src="Images/Products/Isolators/ACIso.avif" alt="AC/DC Inverter" class="carousel-img active">
-                            <img src="Images/Products/Isolators/DCIso.jpg" alt="AC/DC Inverter" class="carousel-img">
+                            <img src="Images/Products/Isolators/ACIso.avif" alt="AC/DC Inverter" class="carousel-img active" width="180" height="180" loading="eager">
+                            <img src="Images/Products/Isolators/DCIso.jpg" alt="AC/DC Inverter" class="carousel-img" width="180" height="180" loading="lazy">
                         </div>
                         <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                     </div>
@@ -299,8 +308,8 @@
                         <div class="image-carousel">
                             <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                             <div class="carousel-images">
-                                <img src="Images/Products/HeatExtract/exhimage2.jpg" alt="Solar Heat Extractor" class="carousel-img active">
-                                <img src="Images/Products/HeatExtract/exhimage3.jpg" alt="Solar Heat Extractor" class="carousel-img">
+                                <img src="Images/Products/HeatExtract/exhimage2.jpg" alt="Solar Heat Extractor" class="carousel-img active" width="180" height="180" loading="eager">
+                                <img src="Images/Products/HeatExtract/exhimage3.jpg" alt="Solar Heat Extractor" class="carousel-img" width="180" height="180" loading="lazy">
                             </div>
                             <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                             </div>
@@ -315,8 +324,8 @@
                         <div class="image-carousel">
                             <button class="carousel-btn carousel-btn-left" onclick="changeImage(this, -1)">‹</button>
                             <div class="carousel-images">
-                                <img src="Images/Products/HeatExtract/wallfan.jpg" alt="Solar Heat Extractor" class="carousel-img active">
-                                <img src="Images/Products/HeatExtract/wallfan2.png" alt="Solar Heat Extractor" class="carousel-img">
+                                <img src="Images/Products/HeatExtract/wallfan.jpg" alt="Solar Heat Extractor" class="carousel-img active" width="180" height="180" loading="eager">
+                                <img src="Images/Products/HeatExtract/wallfan2.png" alt="Solar Heat Extractor" class="carousel-img" width="180" height="180" loading="lazy">
                             </div>
                             <button class="carousel-btn carousel-btn-right" onclick="changeImage(this, 1)">›</button>
                             </div>
@@ -328,7 +337,7 @@
                     </div>
                     
                     <div class="product-card">
-                        <img src="Images/Products/HeatExtract/ceilingfan.jpg" alt="Solar Heat Extractor Model C" class="product-card-img">
+                        <img src="Images/Products/HeatExtract/ceilingfan.jpg" alt="Solar Heat Extractor Model C" class="product-card-img" width="180" height="180" loading="lazy">
                         <h4>Solar Ceiling Fan</h4>
                         <p>Advanced solar heat extraction system with smart controls and maximum efficiency ratings.</p>
                         <a href="Images/Products/HeatExtract/CeilingFan.pdf" target="_blank" class="learn-more-btn">Learn More</a>
@@ -391,6 +400,15 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        // Critical: Prevent layout shift for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        }
+    </script>
     <script>
         // Video Modal Functions
         function openVideoModal(videoSrc) {

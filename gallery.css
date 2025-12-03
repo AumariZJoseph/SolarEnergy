@@ -70,6 +70,11 @@ body {
     box-shadow: 0 4px 20px rgba(67,184,67,0.08);
     cursor: pointer;
     transition: all 0.3s ease;
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-item.large {
+    aspect-ratio: 4 / 6;
 }
 
 .gallery-item:hover {
@@ -82,6 +87,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .gallery-item:hover .gallery-img {

@@ -1,3 +1,37 @@
+// Optimized: Use requestIdleCallback for non-critical initialization
+(function() {
+'use strict';
+
+// Mobile Navigation Toggle - moved to top for faster interaction
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }));
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && 
+            !navMenu.contains(e.target) && 
+            !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 // Hero Slideshow Functionality
 const slides = document.querySelectorAll('.hero-slide');
@@ -338,22 +372,7 @@ if (brandingSlidesBg.length > 0) {
     }
 }
 
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }));
-}
+// Mobile Navigation Toggle - moved to top, already handled above
 
 // FAQ Accordion Functionality
 const faqItems = document.querySelectorAll('.faq-item');
@@ -757,6 +776,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 }); // Close the initial DOMContentLoaded event listener
+
+})(); // Close IIFE
 
 // Technical Details Collapsible Functionality
 document.addEventListener('DOMContentLoaded', function() {
